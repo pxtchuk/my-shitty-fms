@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+{{ dd(Auth::user()->rankModels->name) }}
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -87,7 +89,7 @@
                             <tr>
                                 <th>Rank</th>
                                 @empty(Auth::user()->rank_id)
-                                    <td>No PIN set.</td>
+                                    <td>No Rank set.</td>
                                 @else
                                     <td>{{ Auth::user()->rank_id->name }}</td>
                                 @endempty

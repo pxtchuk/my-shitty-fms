@@ -28,6 +28,7 @@ class User extends Authenticatable
         'discordid',
         'teamspeakid',
         'email',
+        'rank_id',
         'password',
     ];
 

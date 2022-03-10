@@ -17,5 +17,13 @@ class RankModel extends Model
         return $this->belongsTo(User::class);
     }
 
+    protected $fillable = [
+        'name',
+        'abbreviation',
+        'rank_level',
+        'discord_id',
+        'public_id',
+        'teamspeak_id',
+    ];
+
 }
-    
