@@ -83,6 +83,15 @@
                                         <td>{{ Auth::user()->pin }}</td>
                                     @endempty
                                 </tr>
+                            </tr>
+                            <tr>
+                                <th>Rank</th>
+                                @empty(Auth::user()->rank_id)
+                                    <td>No PIN set.</td>
+                                @else
+                                    <td>{{ Auth::user()->rank_id->name }}</td>
+                                @endempty
+                            </tr>
                                 <tr>
                                     <th>Activity requirement exemption</th>
                                     @if (Auth::user()->activity_exempt == 1)
