@@ -32,9 +32,9 @@ class User extends Authenticatable
         'password',
     ];
 
-    public function rankModels()
+    public function rank()
     {
-        return $this->hasMany(RankModel::class);
+        return $this->belongsTo(Rank::class);
     }
 
     /**

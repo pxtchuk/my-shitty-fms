@@ -12,9 +12,9 @@ class RankModel extends Model
     protected $table = 'ranks';
     protected $primaryKey = 'id';
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(User::class);
     }
 
     protected $fillable = [
